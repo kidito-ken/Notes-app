@@ -1,0 +1,29 @@
+/* AddEditNote.css */
+.add-edit-note-form {
+    background-color: cornsilk;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .add-edit-note-form .form-group {
+    margin-bottom: 20px;
+    background-color: cornsilk;
+  }
+  
+  .add-edit-note-form label {
+    font-weight: bold;
+  }
+  
+  .add-edit-note-form input,
+  .add-edit-note-form textarea {
+    border-radius: 5px;
+    border: 1px solid cornsilk;
+    padding: 10px;
+  }
+  
+  .add-edit-note-form input:focus,
+  .add-edit-note-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }

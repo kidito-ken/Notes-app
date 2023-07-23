@@ -31,6 +31,7 @@ export const getNote: RequestHandler = async(req, res, next) => {
     }
 } 
 
+
 interface CreateNoteBody {
     title?:string,
     text?:string,
