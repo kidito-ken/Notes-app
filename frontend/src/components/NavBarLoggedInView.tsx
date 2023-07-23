@@ -1,6 +1,7 @@
 import { Button, Navbar } from "react-bootstrap";
 import { user } from "../models/user";
 import * as NotesApi from "../network/notes_api"
+import styleUtils from "../styles/utils.module.css"
 
 interface NavBarLoggedInViewProps {
     user: user,
@@ -23,7 +24,7 @@ const NavBarLoggedInView = ({user, onLogoutSuccessful}:NavBarLoggedInViewProps)=
     
     return(
         <>
-        <Navbar.Text className="me-2">
+        <Navbar.Text className={`me-2 ${styleUtils.f1}`}>
             Welcome, {user.username}
         </Navbar.Text>
         <Button onClick={logout}>Log Out</Button>

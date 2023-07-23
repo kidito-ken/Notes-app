@@ -2,6 +2,7 @@ import {user} from "../models/user"
 import {Container, Nav, Navbar} from "react-bootstrap"
 import NavBarLoggedInView from "./NavBarLoggedInView";
 import NavBarLoggedOutView from "./NavBarLoggedOutView";
+import styleUtils from "../styles/utils.module.css"
 
 interface NavBarProps {
     loggedInUser: user | null,
@@ -12,9 +13,9 @@ interface NavBarProps {
 
 const NavBar = ({loggedInUser,onSignUpClicked, onLogInClicked, onLogoutSuccessful}: NavBarProps ) => {
     return (
-        <Navbar bg="primary" variant = "dark" expand="lg" sticky="top">
+        <Navbar  variant = "dark" expand="lg" sticky="top" className={styleUtils.navbar}>
             <Container>
-                <Navbar.Brand>
+                <Navbar.Brand className={styleUtils.f1}>
                     NoteNation
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="main-navbar"/>
