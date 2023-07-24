@@ -2,17 +2,10 @@ import { RequestHandler } from "express";
 import createHttpError from "http-errors";
 import UserModel from "../models/user"
 import bcrypt from "bcrypt"
-import session from "express-session";
 
 export const getAuthenticedUser: RequestHandler = async (req, res, next) => {
-    const AuthenticedUserId = req.session.userId;
-
 try {
-    if(!AuthenticedUserId){
-        throw createHttpError(401, "User not authenticated")
-    }
-
-    const user = await UserModel.findById(AuthenticedUserId).select("+email").exec()
+    const user = await UserModel.findById(req.session.userId).select("+email").exec()
     res.status(200).json(user);
 } catch (error) {
     next(error)
